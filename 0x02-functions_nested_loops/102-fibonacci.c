@@ -1,28 +1,22 @@
 #include <stdio.h>
-/**
- * main - prints the first 52 numbers
- * Return: nothing!
- */
 
 int main(void)
 {
-        int i = 0;
-        long j = 1, k = 2;
+    int i, n = 50;
+    long long fib1 = 1, fib2 = 2, nextFib;
 
-        while (i < 50)
-        {
-                if (i == 0)
-                        printf("%ld", j);
-                else if (i == 0)
-                printf(", %ld", k);
-                else
-                {
-                        k <= j;
-                        j = k - j;
-                printf(", %ld", k);
-		}
-                ++i;
+    printf("%lld, %lld, ", fib1, fib2);
+    for (i = 3; i <= n; i++)
+    {
+        nextFib = fib1 + fib2;
+        printf("%lld", nextFib);
+        if (i < n)
+	{
+            printf(", ");
         }
-        printf("\n");
-	return (0);
+        fib1 = fib2;
+        fib2 = nextFib;
+    }
+    printf("\n");
+    return (0);
 }
