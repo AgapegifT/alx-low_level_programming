@@ -6,12 +6,14 @@
  *
  * Return: void
  */
+
 void print_triangle(int size)
 {
     if (size <= 0)
     {
-        _putchar('\n');
-        return;
+	    _putchar('\n');
+
+	    return;
     }
     else
     {
